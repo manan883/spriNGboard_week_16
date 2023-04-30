@@ -1,0 +1,7 @@
+docker run -it --rm \
+  --mount type=bind,source="$(pwd)"/config_files,target=/home/docker-user/config_files \
+  --mount type=bind,source="$(pwd)"/pyenv_versions,target=/home/docker-user/.pyenv/versions \
+  --mount type=bind,source="$(pwd)"/exercises,target=/home/docker-user/projects \
+  klb75/docker_exper_02
+
+
