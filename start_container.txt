@@ -1,3 +1,5 @@
+mkdir -p pyenv_versions exercises
+
 sudo docker run -it --rm \
   -e HOST_UID="$(id -u)" \
   -e HOST_GID="$(id -g)" \
