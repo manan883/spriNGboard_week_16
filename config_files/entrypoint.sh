@@ -26,6 +26,5 @@ if [[ $# -gt 0 ]]; then
     exec su - docker-user "$@"
 else
     #exec sudo -u -H docker-user -- bash
-    echo HERE
     exec su - docker-user
 fi
