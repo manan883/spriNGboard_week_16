@@ -1,7 +1,9 @@
-docker run -it --rm \
-  --mount type=bind,source="$(pwd)"/config_files,target=/home/docker-user/config_files \
-  --mount type=bind,source="$(pwd)"/pyenv_versions,target=/home/docker-user/.pyenv/versions \
-  --mount type=bind,source="$(pwd)"/exercises,target=/home/docker-user/projects \
+sudo docker run -it --rm \
+  -e HOST_UID="$(id -u)" \
+  -e HOST_GID="$(id -g)" \
+  --mount type=bind,source="$(pwd)"/config_files,target=/config_files \
+  --mount type=bind,source="$(pwd)"/pyenv_versions,target=/pyenv_versions \
+  --mount type=bind,source="$(pwd)"/exercises,target=/projects \
   klb75/docker_exper_02
 
 
